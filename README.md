@@ -1,36 +1,142 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# The Blog
 
-## Getting Started
+A modern blog platform built with Next.js App Router, TypeScript, Tailwind CSS, shadcn/ui, and Contentful CMS.
 
-First, run the development server:
+## Live Demo
+
+Deployed URL:
+https://eshkon-assignment-kappa.vercel.app/
+
+---
+
+## GitHub Repository
+
+Repository URL:
+https://github.com/sahilnikalje/eshkon-assignment
+
+---
+
+## Tech Stack
+
+- Next.js 16
+- TypeScript
+- Tailwind CSS
+- shadcn/ui
+- Contentful CMS
+- Vercel
+
+---
+
+## Features
+
+- Modern responsive UI
+- Home page with hero section
+- Blog listing page
+- Dynamic blog detail pages
+- Rich text rendering
+- SEO metadata generation
+- ISR / revalidation
+- Optimized images using next/image
+- Loading states
+- 404 handling
+
+---
+
+## Project Structure
+
+```txt
+src/
+├── app/
+│   ├── layout.tsx
+│   ├── page.tsx
+│   ├── not-found.tsx
+│   ├── blog/
+│   │   ├── page.tsx
+│   │   └── [slug]/
+│   │       ├── page.tsx
+│   │       └── loading.tsx
+├── components/
+│   ├── layout/
+│   │   ├── Navbar.tsx
+│   │   └── Footer.tsx
+│   ├── blog/
+│   │   ├── BlogCard.tsx
+│   │   ├── BlogGrid.tsx
+│   │   └── RichTextRender.tsx
+│   └── home/
+│       ├── Hero.tsx
+│       └── LatestPosts.tsx
+├── lib/
+│   └── contentful.ts
+├── types/
+│   └── blog.ts
+```
+
+---
+
+## Setup Instructions
+
+Clone the repository:
+
+```bash
+git clone https://github.com/sahilnikalje/eshkon-assignment.git
+```
+
+Install dependencies:
+
+```bash
+npm install
+```
+
+Create `.env.local`:
+
+```env
+CONTENTFUL_SPACE_ID=your_space_id
+CONTENTFUL_ACCESS_TOKEN=your_access_token
+```
+
+Run development server:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Build project:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```bash
+npm run build
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+---
 
-## Learn More
+## Contentful Content Model
 
-To learn more about Next.js, take a look at the following resources:
+Content Type:
+```txt
+BlogPost
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Fields:
+- title
+- slug
+- excerpt
+- content
+- coverImage
+- publishedDate
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+---
 
-## Deploy on Vercel
+## Contentful Model Screenshot
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+![Content Model](public/blogpost.png)
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+---
+
+## Deployment
+
+The project is deployed using Vercel.
+
+Production URL:
+https://eshkon-assignment-kappa.vercel.app/
+
+---
